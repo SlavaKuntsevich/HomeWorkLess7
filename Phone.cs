@@ -5,102 +5,60 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace HomeWorkCLncPhnCrdt
-{   //TASK 1
-    public class Phone1
+{   
+    public class Phone
     {
         public long number = 375441234567;
-        public string model = "Iphone 12";
-        public double weight = 163.5;
-        public int result;
-        public void ReceiveCall(string name)
-        {
-            Console.WriteLine($"Вам звонит {name}");
-        }
-        public void ShowCharacteristics1()
-        {
-            string format = string.Format("{0:+### (##) ###-##-##}", number);
-            Console.WriteLine($"Телефон {model}, номер {format}, вес {weight}г");
-        }
-        public void ShowCharacteristics2()
-        {
-            string format = string.Format("{0:+### (##) ###-##-##}", number);
-            Console.WriteLine($"Телефон {model}, номер {format}");
-        }
-        public void ShowCharacteristics3()
-        {
-            string format = string.Format("{0:+### (##) ###-##-##}", number);
-            Console.WriteLine($"Телефон {model}, номер {format}");
-        }        
-        public void GetNumber()
-        {
-            string format = string.Format("{0:+### (##) ###-##-##}", number);
-            Console.WriteLine($"Номер телефона {format}");
-        }
-        public Phone1(long number, string model, double weight)
+        public string model = "iPhone 12 256GB";
+        public int weight = 166;
+        public Phone(long number, string model, int weight)
         {
             this.number = number;
             this.model = model;
             this.weight = weight;
         }
-        public Phone1(long number, string model)
+        public Phone(long number, string model)
         {
             this.number = number;
             this.model = model;
         }
-        public Phone1() { }
-        public void SendMessage(long number)
+        public Phone() { }
+        public void InitialParameters()
+        {
+            var format = string.Format("{0:+### (##) ###-##-##}", number);
+            Console.WriteLine($"Телефон {model}, номер {format}, вес {weight}г");
+        }
+        public void Parameters()
+        {
+            var format = string.Format("{0:+### (##) ###-##-##}", number);
+            Console.WriteLine($"Телефон {model}, номер {format}, вес {weight}г");
+            Parameters2();
+        }
+        public void Parameters2()
         {
             string format = string.Format("{0:+### (##) ###-##-##}", number);
-            Console.WriteLine($"сообщение отправлено на номер {format}");
+            Console.WriteLine($"Телефон {model}, номер {format}");
+        }
+        public void ReceiveCall(string name)
+        {
+            Console.WriteLine($"Вам звонит {name}");
+        }
+        public void GetNumber(long number)
+        {
+            string format = string.Format("{0:+### (##) ###-##-##}", number);
+            Console.WriteLine($"Номер телефона {format}");
         }
         public void ReceiveCall(string name, long number)
         {
             string format = string.Format("{0:+### (##) ###-##-##}", number);
             Console.WriteLine($"Вам звонит {name}, номер {format}");
         }
-        public class Phone2
+        public void sendMessage(long number)
         {
-            public long number = 375291234567;
-            public string model = "Nokia 3310";
-            public double weight = 150;
-            public int result;
-            public void ShowCharacteristics2()
-            {
-                string format = string.Format("{0:+### (##) ###-##-##}", number);
-                Console.WriteLine($"Телефон {model}, номер {format},вес {weight} г ");
-            }
-            public void ReceiveCall(string name)
-            {
-                Console.WriteLine($"Вам звонит {name}");
-            }
-            public void GetNumber2()
-            {
-                string format = string.Format("{0:+### (##) ###-##-##}", number);
-                Console.WriteLine($"Номер телефона {format}");
-            }
+            string format = string.Format("{0:+### (##) ###-##-##}", number);
+            Console.WriteLine($"Сообщение отправлено на номер {format}");
         }
-        public class Phone3
-        {
-            public long number = 375331234567;
-            public string model = "Domofon 3000 256Flats";
-            public double weight = 3000;
-            public int result;
-            public void ShowCharacteristics3()
-            {
-                string format = string.Format("{0:+### (##) ###-##-##}", number);
-                Console.WriteLine($"Телефон {model}, номер {format}, вес {weight}г");
-            }
-            public void ReceiveCall(string name)
-            {
-                Console.WriteLine($"Вам звонит {name}");
-            }
-            public void GetNumber3()
-            {
-                string format = string.Format("{0:+### (##) ###-##-##}", number);
-                Console.WriteLine($"Номер телефона {format}");
-            }
-        }
-    }    
+    }
 }
 
 
